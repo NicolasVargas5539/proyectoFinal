@@ -7,6 +7,7 @@ import { LoginAuditoriaComponent } from './pages/login-auditoria/login-auditoria
 import { OrdenComponent } from './pages/orden/orden.component';
 import { AgregarOrdenComponent } from './pages/agregar-orden/agregar-orden.component';
 import { FormsModule } from '@angular/forms';
+import { UsersComponent } from './pages/users/users.component';
 
 
 
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     LoginAuditoriaComponent,
     OrdenComponent,
     AgregarOrdenComponent,
+    UsersComponent,
   ],
   exports: [
     LoginComponent,
@@ -26,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     LoginAuditoriaComponent,
     OrdenComponent,
     AgregarOrdenComponent,
+    UsersComponent
   ],
   imports: [
     CommonModule,
