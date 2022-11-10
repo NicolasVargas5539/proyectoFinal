@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  background-image: url('app/biblioteca/img/fondo.jpg');
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-attachment: fixed;
+}
+
+@media(max-width:520px) {
+  body{
+    background-image: url('app/biblioteca/img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: 300%;
+    background-attachment: fixed;
+  }
+}
+@media(max-width:1440px) {
+  body{
+    background-image: url('app/biblioteca/img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: 250%;
+    background-attachment: fixed;
+  }
+}
+.sub{
+  background-color: rgba(17, 17, 17, 0.771);
+  background-size: 200%;
+}
+
+
