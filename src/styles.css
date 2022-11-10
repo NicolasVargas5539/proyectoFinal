@@ -16,8 +16,8 @@ body{
 @media(max-width:1440px) {
   body{
     background-image: url('app/biblioteca/img/fondo.jpg');
-    background-repeat: no-repeat;
     background-size: 250%;
+    background-repeat: repeat-y;
     background-attachment: fixed;
   }
 }

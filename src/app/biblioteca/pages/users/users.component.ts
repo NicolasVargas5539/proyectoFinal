@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
 import {BibliotecaService} from "../../services/biblioteca.service";
-import {Datum} from "../../interfaces/users.interface";
+
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  styles: [`
+  .users{
+    height: 100vh;
+  }
+  `
+  ]
 })
 export class UsersComponent {
 

@@ -20,7 +20,7 @@ import { Component } from '@angular/core';
     .container-logo{
       border: 1px solid rgb(60, 60, 60);
       border-radius: 5%;
-      box-shadow: 10px 10px 20px rgba(80, 80, 80, 0.594);
+      box-shadow: 10px 10px 20px rgba(10, 10, 10, 0.8);
       background-color: rgba(31, 31, 31, 0.794);
     }
     p{
@@ -39,10 +39,10 @@ import { Component } from '@angular/core';
       background-color: rgb(83, 83, 83);
     }
     .form-control:hover{
-      background-color: rgb(83, 83, 83);
+      background-color: rgba(83, 83, 83, 0.2);
     }
     .form-control:focus{
-      background-color: rgb(83, 83, 83);
+      background-color: rgba(83, 83, 83, 0.5);
     }
 
     `

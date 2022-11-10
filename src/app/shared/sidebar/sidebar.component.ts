@@ -22,6 +22,12 @@ import { Component } from '@angular/core';
       color: rgb(188, 188, 188) !important;
       font-weight: 700;
     }
+
+    @media(max-width:770px) {
+      .container-fluid{
+        background-color: rgb(18, 18, 18);
+      }
+}
     `
   ]
 })

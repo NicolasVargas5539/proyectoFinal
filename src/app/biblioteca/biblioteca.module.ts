@@ -8,6 +8,7 @@ import { OrdenComponent } from './pages/orden/orden.component';
 import { AgregarOrdenComponent } from './pages/agregar-orden/agregar-orden.component';
 import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './pages/users/users.component';
+import { AppRoutiungModule } from '../app-routing.module';
 
 
 
@@ -32,7 +33,8 @@ import { UsersComponent } from './pages/users/users.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    AppRoutiungModule
   ],
 })
 export class BibliotecaModule { }
