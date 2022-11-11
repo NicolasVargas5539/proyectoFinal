@@ -8,7 +8,9 @@ import {BibliotecaService} from "../../services/biblioteca.service";
   styles: [`
   .users{
     height: 100vh;
+    color: white;
   }
+
   `
   ]
 })

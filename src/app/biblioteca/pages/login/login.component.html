@@ -1,18 +1,21 @@
 <div class="container">
   <div class="row justify-content-between login">
-    <div class="col-xl-4 col-md-6 col-sm-10 align-self-center">
+    <div class="col-xl-4 col-md-6 col-sm-10 align-self-center animate__animated animate__backInDown">
       <h1>Las Cronicas Del Merodeador.</h1>
       <p>Ingrese sesión.</p>
     </div>
-    <div class="col-xl-4 col-md-6 col-sm-10 align-self-center container-logo p-5">
+    <div class="col-xl-4 col-md-6 col-sm-10 align-self-center container-logo p-5 animate__animated animate__backInDown">
       <h4 class="text-center">Ingresar a la sesión.</h4>
       <div class="logo-login mt-3 mb-3">
         <img src="../../img/login.jpg" alt="">
       </div>
-      <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
-      </div>
+      <form (ngSubmit)="buscar()" autocomplete="off">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="correo"
+            [(ngModel)]="correo">
+          <label for="floatingInput">Email address</label>
+        </div>
+      </form>
       <div class="form-floating mb-3">
         <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
         <label for="floatingPassword">Password</label>

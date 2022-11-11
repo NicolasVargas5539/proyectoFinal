@@ -43,6 +43,7 @@ import { Component } from '@angular/core';
     }
     .form-control:focus{
       background-color: rgba(83, 83, 83, 0.5);
+      color: azure;
     }
 
     `
@@ -50,6 +51,14 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  correo: string = '';
+  // clave: string = '';
+
+
   constructor() { }
 
+  buscar(){
+    console.log(this.correo);
+    // console.log(this.clave);
+  }
 }

@@ -1,24 +1,25 @@
-<div class="row pt-5 users">
-  <div class="col-sm-12 col-xl-12 pt-5">
-    <div class="table-responsive rounded">
-      <table class="table table-dark table-striped table-hover">
+<div class="row pt-5 users ">
+  <div class="col-12 pt-5 animate__animated animate__backInDown">
+    <div class="table-responsive">
+      <h2>Lista de Usuarios.</h2>
+      <table class="table table-dark table-striped table-hover mt-3">
         <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Apellido</th>
-          <th scope="col">Email</th>
-          <th scope="col">Celular</th>
-        </tr>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Email</th>
+            <th scope="col">Celular</th>
+          </tr>
         </thead>
-        <tbody>
-        <tr *ngFor="let item of users; let i = index" >
-          <th scope="row">{{ item.id }}</th>
-          <td>{{ item.name }}</td>
-          <td>{{ item.last_name }}</td>
-          <td>{{ item.email }}</td>
-          <td>{{ item.phone }}</td>
-        </tr>
+        <tbody class="animate__animated animate__backInDown rounded">
+          <tr *ngFor="let item of users; let i = index">
+            <th scope="row">{{ item.id }}</th>
+            <td>{{ item.name }}</td>
+            <td>{{ item.last_name }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.phone }}</td>
+          </tr>
         </tbody>
       </table>
     </div>
