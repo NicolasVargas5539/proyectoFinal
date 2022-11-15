@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { BibliotecaModule } from './biblioteca/biblioteca.module';
 import { AppRoutiungModule } from './app-routing.module';
-
-
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,9 @@ import { AppRoutiungModule } from './app-routing.module';
     AppRoutiungModule,
     HttpClientModule,
     SharedModule,
-    BibliotecaModule
+    BibliotecaModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

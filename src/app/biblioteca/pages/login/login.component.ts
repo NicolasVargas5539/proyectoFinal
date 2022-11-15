@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { BibliotecaService } from '../../services/biblioteca.service';
 import { Login } from '../../interfaces/login.interface';
+import {ToastrService} from "ngx-toastr";
+import {Router, RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -57,17 +59,27 @@ import { Login } from '../../interfaces/login.interface';
 export class LoginComponent {
 
   loginForm = new FormGroup({
-    usuario: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
   })
 
-  constructor( private bibliotecaService: BibliotecaService) { }
+  constructor(
+    private bibliotecaService: BibliotecaService,
+    private toastService: ToastrService,
+    private router: Router
+  ) { }
 
   onLogin(form: Login){
-    console.log(form);
-
-    // this.BibliotecaService.postUser(form).subscribe(data =>{
-    //   console.log(data);
-    // })
+    this.bibliotecaService.login(form).subscribe(response =>{
+      this.toastService.success("Bienvenido", "Libreria");
+      setTimeout(() => {
+        localStorage.setItem('token', response.data.token);
+        this.router.navigate(['/usuarios'])
+      }, 1500)
+    }, error => {
+      if (400 === error.status) {
+        this.toastService.error("usuario y/o contraseña incorrectos", "Libreria")
+      }
+    })
   }
 }

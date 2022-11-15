@@ -22,8 +22,8 @@ export class BibliotecaService {
     return this.http.get(url)
   }
 
-  postUser(form:Login) : Observable<Response>{
+  login(form:Login) : Observable<any>{
     const url = `${this.apiUrl}login`;
-    return this.http.post<Response>(url, form)
+    return this.http.post<any>(url, form)
   }
 }

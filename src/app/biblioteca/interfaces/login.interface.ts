@@ -1,5 +1,5 @@
 export interface Login{
-  usuario:string;
+  email:string;
   password: string;
   tokken: string;
 }
