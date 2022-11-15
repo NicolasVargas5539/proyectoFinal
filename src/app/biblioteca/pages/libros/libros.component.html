@@ -1,3 +1,13 @@
-<div class="libros">
-
+<div class="libros animate__animated">
+  <h1 class="animate__animated animate__backInDown">Libros Disponibles</h1>
+  <hr>
+  <div *ngFor="let item of users; let i = index"
+        class="card text-bg-light mb-3 shadow-lg p-3 bg-body rounded animate__animated animate__backInDown ">
+    <div class="card-header">{{ item.name }}</div>
+    <div class="card-body">
+      <h2 class="card-title">{{ item.name | titlecase }}</h2>
+      <p class="card-text">{{'Descripción: ' + item.description}}</p>
+      <p class="card-text">{{'Precio: ' + item.price + ' pesos'}}</p>
+    </div>
+  </div>
 </div>

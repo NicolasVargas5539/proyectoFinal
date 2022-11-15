@@ -6,8 +6,7 @@ import { LoginComponent } from './biblioteca/pages/login/login.component';
 import { OrdenComponent } from './biblioteca/pages/orden/orden.component';
 import { AgregarOrdenComponent } from './biblioteca/pages/agregar-orden/agregar-orden.component';
 import { AgregarLibrosComponent } from './biblioteca/pages/agregar-libros/agregar-libros.component';
-import { LoginAuditoriaComponent } from './biblioteca/pages/login-auditoria/login-auditoria.component';
-import {UsersComponent} from "./biblioteca/pages/users/users.component";
+import { UsersComponent } from "./biblioteca/pages/users/users.component";
 
 const routes: Routes = [
   {
@@ -16,8 +15,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'login/:id',
-    component: LoginAuditoriaComponent
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'libros',
@@ -54,7 +53,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports:[
+  imports: [
     RouterModule.forRoot(routes)
   ],
   exports: [
@@ -62,4 +61,4 @@ const routes: Routes = [
   ]
 })
 
-export class AppRoutiungModule {}
+export class AppRoutiungModule { }

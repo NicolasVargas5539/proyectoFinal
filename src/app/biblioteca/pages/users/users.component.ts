@@ -26,8 +26,8 @@ export class UsersComponent {
   {
      this.bibliotecaService.getUsers('users')
        .subscribe(users => {
-         this.users = users.data
+         this.users = users.data;
+        //  console.log(users.data);
        })
   }
-
 }

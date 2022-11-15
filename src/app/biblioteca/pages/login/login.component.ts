@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { BibliotecaService } from '../../services/biblioteca.service';
+import { Login } from '../../interfaces/login.interface';
 
 @Component({
   selector: 'app-login',
@@ -6,6 +9,7 @@ import { Component } from '@angular/core';
   styles: [
     `
     .login{
+      padding-top: 4rem;
       height: 100vh
     }
     .logo-login{
@@ -24,7 +28,7 @@ import { Component } from '@angular/core';
       background-color: rgba(31, 31, 31, 0.794);
     }
     p{
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
       color: white;
     }
@@ -34,6 +38,7 @@ import { Component } from '@angular/core';
     input{
       border: 1px solid rgb(90, 90, 90);
       background-color: rgba(31, 31, 31, 0.394);
+      color: azure;
     }
     .form-control:active{
       background-color: rgb(83, 83, 83);
@@ -51,14 +56,18 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-  correo: string = '';
-  // clave: string = '';
+  loginForm = new FormGroup({
+    usuario: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
+  })
 
+  constructor( private bibliotecaService: BibliotecaService) { }
 
-  constructor() { }
+  onLogin(form: Login){
+    console.log(form);
 
-  buscar(){
-    console.log(this.correo);
-    // console.log(this.clave);
+    // this.BibliotecaService.postUser(form).subscribe(data =>{
+    //   console.log(data);
+    // })
   }
 }
