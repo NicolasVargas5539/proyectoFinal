@@ -7,11 +7,10 @@
     <div class="col-xl-4 col-md-6 col-sm-10 align-self-center container-logo p-5 animate__animated animate__backInDown">
       <h4 class="text-center">Ingresar a la sesión.</h4>
       <div class="logo-login mt-3 mb-3">
-        <img src="../../img/login.jpg" alt="">
       </div>
       <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)" autocomplete="off">
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="usuario">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email">
           <label for="floatingInput">Email address</label>
         </div>
         <div class="form-floating mb-3">

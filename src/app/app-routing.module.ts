@@ -7,6 +7,7 @@ import { OrdenComponent } from './biblioteca/pages/orden/orden.component';
 import { AgregarOrdenComponent } from './biblioteca/pages/agregar-orden/agregar-orden.component';
 import { AgregarLibrosComponent } from './biblioteca/pages/agregar-libros/agregar-libros.component';
 import { UsersComponent } from "./biblioteca/pages/users/users.component";
+import {AuditoriaComponent} from "./biblioteca/pages/auditoria/auditoria.component";
 
 const routes: Routes = [
   {
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path: 'usuarios',
     component: UsersComponent
+  },
+  {
+    path: 'auditoria/:id',
+    component: AuditoriaComponent
   },
   {
     path: '**',

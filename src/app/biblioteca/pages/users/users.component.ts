@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {BibliotecaService} from "../../services/biblioteca.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -18,7 +19,13 @@ export class UsersComponent {
 
   users: any = []
 
-  constructor(private bibliotecaService: BibliotecaService) {
+  constructor(
+    private bibliotecaService: BibliotecaService,
+    private router: Router
+  ) {
+    if (!localStorage.getItem('token')) {
+      this.router.navigate(['/login'])
+    }
     this.getUsers()
   }
 
