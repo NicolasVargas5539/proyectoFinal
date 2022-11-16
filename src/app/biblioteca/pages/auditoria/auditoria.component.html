@@ -1,3 +1,29 @@
-<div class="pt-5">
-  <h1>HOLAAA</h1>
+<div class="row pt-5 auditoria">
+  <div class="col-12 pt-5 animate__animated animate__backInDown">
+    <div class="table-responsive ">
+      <h2>Lista de Usuarios.</h2>
+      <div class="d-grid gap-2">
+        <button type="button" routerLink="/users" class="btn btn-success">Ver Usuarios del sistema.
+        </button>
+      </div>
+      <table class="table table-light table-striped table-hover mt-3 text-center">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Tipo de Acción</th>
+            <th scope="col">Fecha</th>
+          </tr>
+        </thead>
+        <tbody class="animate__animated animate__backInDown rounded">
+          <tr *ngFor="let item of users; let i = index">
+            <th scope="row">{{ item.id }}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.type}}</td>
+            <td>{{item.created_at}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

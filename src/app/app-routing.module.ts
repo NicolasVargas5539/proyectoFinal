@@ -48,7 +48,7 @@ const routes: Routes = [
     component: UsersComponent
   },
   {
-    path: 'auditoria/:id',
+    path: 'auditoria',
     component: AuditoriaComponent
   },
   {

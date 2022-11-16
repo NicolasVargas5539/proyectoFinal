@@ -33,4 +33,9 @@ export class BibliotecaService {
     console.log(url)
     return this.http.get(url)
   }
+
+  getAudits(termino: string) : Observable<any>{
+    const url = `${this.apiUrl}${termino}`;
+    return this.http.get(url)
+  }
 }
