@@ -67,7 +67,11 @@ export class LoginComponent {
     private bibliotecaService: BibliotecaService,
     private toastService: ToastrService,
     private router: Router
-  ) { }
+  ) {
+    if (localStorage.getItem('token')) {
+      this.router.navigate(['/usuarios'])
+    }
+  }
 
   onLogin(form: Login){
     this.bibliotecaService.login(form).subscribe(response =>{
@@ -75,6 +79,7 @@ export class LoginComponent {
       setTimeout(() => {
         localStorage.setItem('token', response.data.token);
         this.router.navigate(['/usuarios'])
+        location.reload()
       }, 1500)
     }, error => {
       if (400 === error.status) {

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {ToastrService} from "ngx-toastr";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-sidebar',
@@ -33,6 +35,19 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent{
 
-  constructor() { }
+  token: any = ''
+
+  constructor(private toastService: ToastrService, private router: Router) {
+    this.token = localStorage.getItem('token')
+  }
+
+  logOut = () => {
+    this.token = ''
+    localStorage.removeItem('token')
+    this.toastService.info("adios", "Libreria")
+    setTimeout(() => {
+      this.router.navigate(['/login'])
+    }, 1500)
+  }
 
 }
