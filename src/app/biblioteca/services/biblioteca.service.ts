@@ -26,4 +26,11 @@ export class BibliotecaService {
     const url = `${this.apiUrl}login`;
     return this.http.post<any>(url, form)
   }
+
+  logOut(termino: string): Observable<any>{
+    console.log("entra al service")
+    const url = `${this.apiUrl}${termino}`;
+    console.log(url)
+    return this.http.get(url)
+  }
 }

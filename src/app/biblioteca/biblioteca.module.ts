@@ -9,6 +9,7 @@ import { OrdenComponent } from './pages/orden/orden.component';
 import { AgregarOrdenComponent } from './pages/agregar-orden/agregar-orden.component';
 import { UsersComponent } from './pages/users/users.component';
 import { AppRoutiungModule } from '../app-routing.module';
+import { AuditoriaComponent } from './pages/auditoria/auditoria.component';
 
 
 
@@ -20,6 +21,7 @@ import { AppRoutiungModule } from '../app-routing.module';
     OrdenComponent,
     AgregarOrdenComponent,
     UsersComponent,
+    AuditoriaComponent,
   ],
   exports: [
     LoginComponent,
@@ -27,7 +29,8 @@ import { AppRoutiungModule } from '../app-routing.module';
     AgregarLibrosComponent,
     OrdenComponent,
     AgregarOrdenComponent,
-    UsersComponent
+    UsersComponent,
+    AuditoriaComponent
   ],
   imports: [
     CommonModule,

@@ -77,7 +77,8 @@ export class LoginComponent {
     this.bibliotecaService.login(form).subscribe(response =>{
       this.toastService.success("Bienvenido", "Libreria");
       setTimeout(() => {
-        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('token', response.data.token)
+        localStorage.setItem('id', response.data.id)
         this.router.navigate(['/usuarios'])
         location.reload()
       }, 1500)

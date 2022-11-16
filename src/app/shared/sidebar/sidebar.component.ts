@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {ToastrService} from "ngx-toastr";
 import {Router} from "@angular/router";
+import {BibliotecaService} from "../../biblioteca/services/biblioteca.service";
 
 @Component({
   selector: 'app-sidebar',
@@ -37,11 +38,20 @@ export class SidebarComponent{
 
   token: any = ''
 
-  constructor(private toastService: ToastrService, private router: Router) {
+  constructor(
+    private toastService: ToastrService,
+    private router: Router,
+    private bibliotecaService: BibliotecaService
+  ) {
     this.token = localStorage.getItem('token')
   }
 
   logOut = () => {
+    console.log(`logout/${localStorage.getItem('id')}`)
+    this.bibliotecaService.logOut(`logout/${localStorage.getItem('id')}`)
+      .subscribe(response => {
+        console.log(response)
+      })
     this.token = ''
     localStorage.removeItem('token')
     this.toastService.info("adios", "Libreria")
