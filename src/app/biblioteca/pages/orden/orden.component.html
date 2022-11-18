@@ -1,3 +1,67 @@
 <div class="orden">
+  <h1>Ordenes</h1>
+  <div class="d-grid gap-2">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Crear Orden.
+    </button>
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5 ps-1" id="exampleModalLabel">Generar Orden</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row justify-content-center">
+              <div class="col-xl-8 col-sm-12">
+                <form>
+                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col-6">
+                        <label class="form-label">Nombre</label>
+                        <input class="form-control" type="text" placeholder="Nombre">
+                      </div>
+                      <div class="col-6">
+                        <label class="form-label">Apellido</label>
+                        <input class="form-control" type="text" placeholder="Apellido">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col-10">
+                        <label class="form-label">Libros</label>
+                        <select class="form-select">
+                          <option selected>Libros dispobibles</option>
+                          <option value="1" *ngFor="let item of users; let i = index">{{item.name}}</option>
+                        </select>
+                      </div>
+                      <div class="col-2">
+                        <label class="form-label">Cantidad</label>
+                        <input class="form-control" type="number" placeholder="1">
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <div class="row bg-dark rounded-4 opacity-75 ordenes">
+      <div class="col-12 text-center">
+        <h2 class="mt-4">Todas las ordenes.</h2>
+      </div>
+    </div>
+  </div>
 </div>
