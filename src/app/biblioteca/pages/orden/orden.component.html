@@ -1,4 +1,4 @@
-<div class="orden">
+<div class="orden ">
   <h1>Ordenes</h1>
   <div class="d-grid gap-2">
     <!-- Button trigger modal -->
@@ -32,14 +32,14 @@
                   </div>
                   <div class="mb-3">
                     <div class="row">
-                      <div class="col-10">
+                      <div class="col-9">
                         <label class="form-label">Libros</label>
                         <select class="form-select">
                           <option selected>Libros dispobibles</option>
                           <option value="1" *ngFor="let item of users; let i = index">{{item.name}}</option>
                         </select>
                       </div>
-                      <div class="col-2">
+                      <div class="col-3">
                         <label class="form-label">Cantidad</label>
                         <input class="form-control" type="number" placeholder="1">
                       </div>
